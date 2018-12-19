@@ -3,4 +3,8 @@ export class PosteDeBlog {
     content: string;
     loveIts: number;
     created_at: Date;
+
+    constructor() { 
+        this.created_at = new Date();
+    }
 }

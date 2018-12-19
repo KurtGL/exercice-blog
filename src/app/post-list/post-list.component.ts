@@ -10,6 +10,7 @@ import { PosteDeBlog } from '../../classes/PosteDeBlog';
 export class PostListComponent implements OnInit {
 
   //ttt: PosteDeBlog;
+  @Input() PPP: PosteDeBlog;
 
   les_posts2: PosteDeBlog[] = [
     { "title": "0", "content": "salut", "loveIts": 0, "created_at":new Date("10/01/1980") }, 
@@ -37,15 +38,24 @@ export class PostListComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor() {
+    this.PPP = new PosteDeBlog();
+   }
 
   ngOnInit() {
   }
 
   onAjout() {
+    var newPoste = new PosteDeBlog();
+
+    newPoste.title=this.PPP.title;
+    newPoste.content=this.PPP.content;
+    newPoste.loveIts=0;
+
     var date = new Date();
+    this.les_posts2.push(newPoste);
     //this.les_posts.push({"title":"z", "content":"z", "loveIts":3, "created_at":"date"});
-    this.les_posts2.push({"title":"z", "content":"z", "loveIts":3, "created_at":new Date("04/30/1980")})
+    //this.les_posts2.push({"title":"z", "content":"z", "loveIts":3, "created_at":new Date("04/30/1980")})
   }
 
 }

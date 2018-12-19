@@ -7,6 +7,9 @@
       [created_at]="post.created_at">
     </app-post-list-item>
 
+    <input type="text" class="form-control" [(ngModel)]="PPP.title">
+    <input type="text" class="form-control" [(ngModel)]="PPP.content">
+
     <button class="btn btn-danger"
-  (click)="onAjout()">Je déteste</button>
+  (click)="onAjout()">J'ajoute</button>
 </ul>
