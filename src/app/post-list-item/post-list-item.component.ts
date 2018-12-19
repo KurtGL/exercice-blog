@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { PosteDeBlog } from '../../classes/PosteDeBlog';
 
 @Component({
   selector: 'app-post-list-item',
@@ -7,7 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PostListItemComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    //alert(this.title);
+  }
+
+  @Input() PPP: PosteDeBlog;
 
   @Input() title: string;
   @Input() content: string;
@@ -18,11 +23,11 @@ export class PostListItemComponent implements OnInit {
   }
 
   onPlus() {
-    this.loveIts++;
+    this.PPP.loveIts++;
   }
 
   onMoins() {
-    this.loveIts--;
+    this.PPP.loveIts--;
   }
 
 }

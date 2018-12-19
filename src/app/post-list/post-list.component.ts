@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { PostListItemComponent } from '../post-list-item/post-list-item.component';
+import { PosteDeBlog } from '../../classes/PosteDeBlog';
 
 @Component({
   selector: 'app-post-list',
@@ -8,6 +9,12 @@ import { PostListItemComponent } from '../post-list-item/post-list-item.componen
 })
 export class PostListComponent implements OnInit {
 
+  //ttt: PosteDeBlog;
+
+  les_posts2: PosteDeBlog[] = [
+    { "title": "0", "content": "salut", "loveIts": 0, "created_at":new Date("10/01/1980") }, 
+    { "title": "1", "content": "comment ca va ?", "loveIts": 0, "created_at":new Date("04/30/1980") }
+  ];
 
   les_posts = [
     {
@@ -36,7 +43,9 @@ export class PostListComponent implements OnInit {
   }
 
   onAjout() {
-    this.les_posts.push({"title":"z", "content":"z", "loveIts":3, "created_at":"z"});
+    var date = new Date();
+    //this.les_posts.push({"title":"z", "content":"z", "loveIts":3, "created_at":"date"});
+    this.les_posts2.push({"title":"z", "content":"z", "loveIts":3, "created_at":new Date("04/30/1980")})
   }
 
 }
