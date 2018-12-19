@@ -35,4 +35,8 @@ export class PostListComponent implements OnInit {
   ngOnInit() {
   }
 
+  onAjout() {
+    this.les_posts.push({"title":"z", "content":"z", "loveIts":3, "created_at":"z"});
+  }
+
 }
