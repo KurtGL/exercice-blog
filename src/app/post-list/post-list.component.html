@@ -3,8 +3,8 @@
       [CurrrentPost]="post">
     </app-post-list-item>
 
-    <input type="text" class="form-control" [(ngModel)]="NouveauPost.title">
-    <input type="text" class="form-control" [(ngModel)]="NouveauPost.content">
+    Titre : <input type="text" class="form-control" [(ngModel)]="NouveauPost.title">
+    Contenu : <input type="text" class="form-control" [(ngModel)]="NouveauPost.content">
 
-    <button class="btn btn-danger" (click)="onAjout()">J'ajoute</button>
+    <button class="btn" (click)="onAjout()">J'ajoute</button>
 </ul>
