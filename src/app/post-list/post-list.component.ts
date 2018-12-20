@@ -10,14 +10,15 @@ import { PosteDeBlog } from '../../classes/PosteDeBlog';
 export class PostListComponent implements OnInit {
 
   //ttt: PosteDeBlog;
-  @Input() PPP: PosteDeBlog;
+  @Input() NouveauPost: PosteDeBlog;
+  @Input() LesPosts: PosteDeBlog[];
 
-  les_posts2: PosteDeBlog[] = [
+  /*les_posts2: PosteDeBlog[] = [
     { "title": "0", "content": "salut", "loveIts": 0, "created_at":new Date("10/01/1980") }, 
     { "title": "1", "content": "comment ca va ?", "loveIts": 0, "created_at":new Date("04/30/1980") }
-  ];
+  ];*/
 
-  les_posts = [
+  /*les_posts = [
     {
       title: 'a',
       content: 'b',
@@ -36,10 +37,10 @@ export class PostListComponent implements OnInit {
       loveIts: 3,
       created_at: 'l'
     }
-  ];
+  ];*/
 
   constructor() {
-    this.PPP = new PosteDeBlog();
+    this.NouveauPost = new PosteDeBlog();
    }
 
   ngOnInit() {
@@ -48,12 +49,12 @@ export class PostListComponent implements OnInit {
   onAjout() {
     var newPoste = new PosteDeBlog();
 
-    newPoste.title=this.PPP.title;
-    newPoste.content=this.PPP.content;
+    newPoste.title=this.NouveauPost.title;
+    newPoste.content=this.NouveauPost.content;
     newPoste.loveIts=0;
 
     var date = new Date();
-    this.les_posts2.push(newPoste);
+    this.LesPosts.unshift(newPoste);
     //this.les_posts.push({"title":"z", "content":"z", "loveIts":3, "created_at":"date"});
     //this.les_posts2.push({"title":"z", "content":"z", "loveIts":3, "created_at":new Date("04/30/1980")})
   }

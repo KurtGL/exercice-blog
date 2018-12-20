@@ -12,22 +12,22 @@ export class PostListItemComponent implements OnInit {
     //alert(this.title);
   }
 
-  @Input() PPP: PosteDeBlog;
+  @Input() CurrrentPost: PosteDeBlog;
 
-  @Input() title: string;
+  /*@Input() title: string;
   @Input() content: string;
   @Input() loveIts: number;
-  @Input() created_at: string;
+  @Input() created_at: string;*/
 
   ngOnInit() {
   }
 
   onPlus() {
-    this.PPP.loveIts++;
+    this.CurrrentPost.loveIts++;
   }
 
   onMoins() {
-    this.PPP.loveIts--;
+    this.CurrrentPost.loveIts--;
   }
 
 }

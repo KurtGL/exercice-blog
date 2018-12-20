@@ -1,15 +1,10 @@
 <ul class="list-group">
-    <app-post-list-item  *ngFor="let post of les_posts2"
-      [PPP]="post"
-      [title]="post.title"
-      [content]="post.content"
-      [loveIts]="post.loveIts"
-      [created_at]="post.created_at">
+    <app-post-list-item  *ngFor="let post of LesPosts"
+      [CurrrentPost]="post">
     </app-post-list-item>
 
-    <input type="text" class="form-control" [(ngModel)]="PPP.title">
-    <input type="text" class="form-control" [(ngModel)]="PPP.content">
+    <input type="text" class="form-control" [(ngModel)]="NouveauPost.title">
+    <input type="text" class="form-control" [(ngModel)]="NouveauPost.content">
 
-    <button class="btn btn-danger"
-  (click)="onAjout()">J'ajoute</button>
+    <button class="btn btn-danger" (click)="onAjout()">J'ajoute</button>
 </ul>

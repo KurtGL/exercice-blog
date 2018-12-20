@@ -1,16 +1,22 @@
 <li [ngClass]="{'list-group-item': true,
-'list-group-item-success': loveIts > 0,
-'list-group-item-danger': loveIts < 0 }">
-  <h4>TITRE : {{ PPP.title }} -- CONTENT : {{ PPP.content }} -- LIKE : {{ PPP.loveIts }} -- CREE LE : {{ PPP.created_at }}
-  
-    <!--input type="text" class="form-control" [(ngModel)]="content"-->
-  
-  <button class="btn btn-success"
-  (click)="onPlus()">J'aime</button>
-  <button class="btn btn-danger"
-  (click)="onMoins()">Je déteste</button>
+'list-group-item-success': CurrrentPost.loveIts > 0,
+'list-group-item-danger': CurrrentPost.loveIts < 0 }">
+  <h2>
+      {{ CurrrentPost.title }}
 
+    <span class="pull-right">
+        <small>{{ CurrrentPost.created_at | date: 'dd/MM/y à HH:mm' }}</small>
+    </span>
 
-  </h4>
+     <h5>
+       {{ CurrrentPost.content }}
+     </h5>
+  
+    <br>
+
+    <button class="btn btn-success" (click)="onPlus()">J'aime</button>
+    <button class="btn btn-danger" (click)="onMoins()">Je n'aime pas</button>
+
+  </h2>
 
 </li>
