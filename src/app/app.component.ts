@@ -7,11 +7,11 @@ import { Post } from '../classes/Post';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'exercice-blogxxxx';
 
   ListeDesPosts: Post[] = [
-    { "title": "Bonjour", "content": "Je m'appelle Marcel et c'est mon premier message. Bisous.", "loveIts": -1, "created_at":new Date("04/30/1980 20:50") }, 
-    { "title": "Suite", "content": "Tout va très bien, merci.", "loveIts": 1, "created_at":new Date("04/30/1980 18:25") }
+    { "title": "Bonjour", "content": "Je m'appelle Marcel et c'est mon premier message. Bisous.", "loveIts": -1, "created_at":new Date("04/30/1980 02:50") }, 
+    { "title": "Suite", "content": "Tout va très bien, merci.", "loveIts": 1, "created_at":new Date("04/30/1980 18:25") },
+    { "title": "Au fait...", "content": "Ca va ici ?", "loveIts": 0, "created_at":new Date("12/19/2018 12:40") }
   ];
 
   constructor() {
