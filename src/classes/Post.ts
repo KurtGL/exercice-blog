@@ -1,4 +1,4 @@
-export class PosteDeBlog {
+export class Post {
     title: string;
     content: string;
     loveIts: number;
@@ -6,5 +6,6 @@ export class PosteDeBlog {
 
     constructor() { 
         this.created_at = new Date();
+        this.loveIts = 0;
     }
 }

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { PosteDeBlog } from '../../classes/PosteDeBlog';
+import { Post } from '../../classes/Post';
 
 @Component({
   selector: 'app-post-list-item',
@@ -12,7 +12,7 @@ export class PostListItemComponent implements OnInit {
     //alert(this.title);
   }
 
-  @Input() CurrrentPost: PosteDeBlog;
+  @Input() CurrrentPost: Post;
 
   /*@Input() title: string;
   @Input() content: string;

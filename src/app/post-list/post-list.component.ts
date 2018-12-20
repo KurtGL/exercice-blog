@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { PostListItemComponent } from '../post-list-item/post-list-item.component';
-import { PosteDeBlog } from '../../classes/PosteDeBlog';
+import { Post } from '../../classes/Post';
 
 @Component({
   selector: 'app-post-list',
@@ -10,8 +10,8 @@ import { PosteDeBlog } from '../../classes/PosteDeBlog';
 export class PostListComponent implements OnInit {
 
   //ttt: PosteDeBlog;
-  @Input() NouveauPost: PosteDeBlog;
-  @Input() LesPosts: PosteDeBlog[];
+  @Input() NouveauPost: Post;
+  @Input() LesPosts: Post[];
 
   /*les_posts2: PosteDeBlog[] = [
     { "title": "0", "content": "salut", "loveIts": 0, "created_at":new Date("10/01/1980") }, 
@@ -40,23 +40,19 @@ export class PostListComponent implements OnInit {
   ];*/
 
   constructor() {
-    this.NouveauPost = new PosteDeBlog();
+    this.NouveauPost = new Post();
    }
 
   ngOnInit() {
   }
 
   onAjout() {
-    var newPoste = new PosteDeBlog();
-
+    var newPoste = new Post();
     newPoste.title=this.NouveauPost.title;
     newPoste.content=this.NouveauPost.content;
-    newPoste.loveIts=0;
 
     var date = new Date();
     this.LesPosts.unshift(newPoste);
-    //this.les_posts.push({"title":"z", "content":"z", "loveIts":3, "created_at":"date"});
-    //this.les_posts2.push({"title":"z", "content":"z", "loveIts":3, "created_at":new Date("04/30/1980")})
   }
 
 }

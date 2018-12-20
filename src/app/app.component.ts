@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PosteDeBlog } from '../classes/PosteDeBlog';
+import { Post } from '../classes/Post';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { PosteDeBlog } from '../classes/PosteDeBlog';
 export class AppComponent {
   title = 'exercice-blogxxxx';
 
-  ListeDesPosts: PosteDeBlog[] = [
+  ListeDesPosts: Post[] = [
     { "title": "Bonjour", "content": "Je m'appelle Marcel et c'est mon premier message. Bisous.", "loveIts": -1, "created_at":new Date("04/30/1980") }, 
     { "title": "Suite", "content": "Tout va très bien, merci.", "loveIts": 1, "created_at":new Date("04/30/1980") }
   ];
